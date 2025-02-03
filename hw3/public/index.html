@@ -1,0 +1,104 @@
+<!--Sydney Dean -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cheesecake Order Form</title>
+		<link rel="stylesheet", href="stylesheets/dean24.css">
+	</head>
+	
+	<!-- https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_hide_p -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="javascripts/formsubmission.js"></script>
+	<script src="javascripts/monthdropdown.js"></script>
+	
+	<body>
+		<div id="topDiv">
+			<h1>Cheesecake Order Form</h1>
+			<!-- image -->
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/2560px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Cheesecake" 
+				 width="300",
+				 height="auto"/>
+			<br>
+		</div>
+		
+		<div id="cakeForm">
+			<!-- https://www.w3schools.com/html/html_tables.asp -->
+			<table id="table">
+				<tr>
+					<th>Quantity</th>
+					<th>Topping</th>
+				</tr>
+				<tr>
+					<td>
+						<!-- quantity dropdown -->
+						<select name="quantity" id="quantity">
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						</select>	
+					</td>
+					<td>
+						<!-- topping radio buttons
+						https://www.w3schools.com/tags/att_input_type_radio.asp
+						-->
+						<input type="radio" id="Plain" name="topping" value="Plain", checked="checked">
+						<label for="topping">Plain</label><br>
+						<input type="radio" id="Cherry" name="topping" value="Cherry">
+						<label for="Cherry">Cherry</label><br>
+						<input type="radio" id="Chocolate" name="topping" value="Chocolate">
+						<label for="Chocolate">Chocolate</label>	
+					</td>
+				</tr>
+			</table>
+
+			<p id="notes">Notes:</p>
+			<textarea id="instructions" name="instructions" rows="4" cols="50">Enter any special instructions here.</textarea>
+			<br>
+			
+			<!-- order button-->
+			<br>
+			<button id="order" type="button">Order</button>
+		
+		</div>
+		
+		<!-- Shows when order is placed -->
+		<p id = "placed">Thank you! Your order has been placed!</p>
+		<br>
+		
+		<!-- Total Orders Last Month-->
+		<table id="Month">
+			<tr>
+				<th><h3>Total Orders Last</h3></th>
+				<th>
+				<!-- https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+				<div class="dropdown">
+				  <button class="dropbtn" id="monthButton"><h3>Jan<h3></button>
+				  <div class="dropdown-content">
+					<a>Jan</a>
+					<a>Feb</a>
+					<a>Mar</a>
+					<a>Apr</a>
+					<a>May</a>
+					<a>June</a>
+					<a>July</a>
+					<a>Aug</a>
+					<a>Sep</a>
+					<a>Oct</a>
+					<a>Nov</a>
+					<a>Dec</a>
+				  </div>
+				</div>
+				</th>
+			</tr>
+		
+		</table>
+
+		<!-- order last month-->
+		<ul>
+			<li>11 cherry</li>
+			<li>17 chocolate</li>
+			<li>31 plain</li>
+		</ul>
+
+	</body>
+</html>
